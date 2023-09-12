@@ -1,17 +1,17 @@
-import React, { useRef } from 'react'
+import React, { forwardRef, useRef } from 'react'
+import Form from './Form'
 
 function Home() {
   let name = useRef()
-  console.log('hello')
-  function FormData(e){
-    e.preventDefault()
-    console.log(name.current.value)   
-  }
+  // console.log('hello')
+  
   return (
     <>
-    <form onSubmit={FormData}>
+    <form onSubmit={name.current.FormData()}>
+    <Form ref={name} />
       <input  type='text' ref={name} placeholder='write your name'></input>
       <input type='submit'></input>
+      <Form ref={name}/>
     </form>
     </>
   )
