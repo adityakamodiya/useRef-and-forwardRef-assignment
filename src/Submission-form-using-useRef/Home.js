@@ -7,11 +7,11 @@ function Home() {
   
   return (
     <>
-    <form onSubmit={name.current.FormData()}>
+    <form onSubmit={FormData}>
     <Form ref={name} />
       <input  type='text' ref={name} placeholder='write your name'></input>
       <input type='submit'></input>
-      <Form ref={name}/>
+      {/* <Form ref={name}/> */}
     </form>
     </>
   )
